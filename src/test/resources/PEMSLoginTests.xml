@@ -1,0 +1,53 @@
+  <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="LoginTestSuite" verbose="1">
+	<test name="PositiveLoginTests">
+		<groups>
+			<run>
+				<include name="positiveTests" />
+			</run>
+		</groups>
+
+		<parameter name="username" value="MXSreekanth" />
+		<parameter name="password" value="Csmart" />
+		<parameter name="expectedMessage" value="print" />
+
+		<classes>
+			<class name="com.herokuapp.theinternet.PEMSLoginTests" />
+		</classes>
+	</test>
+
+<!-- 	<test name="NegativeUsernameTest">
+			<groups>
+			<run>
+				<include name="negativeTests" />
+			</run>
+		</groups>
+		<parameter name="username" value="IncorrectUsername" />
+		<parameter name="password" value="Csmart" />
+		<parameter name="expectedMessage"
+			value="An account with that username does not exist." />
+		<classes>
+			<class name="com.herokuapp.theinternet.PEMSLoginTests " />
+			<methods>
+				<include name="negativeLoginTest">
+				</include>
+			</methods>
+		</classes>
+	</test> -->
+	
+<!-- 		<test name="ClientSelectionTests">
+		<groups>
+			<run>
+				<include name="positiveTests" />
+			</run>
+		</groups>
+
+		<parameter name="expectedMessage" value="LNG Trial 4" />
+
+		<classes>
+			<class name="com.herokuapp.theinternet.PEMSLoginTests" />
+		</classes>
+	</test> -->
+
+</suite>
